@@ -1,47 +1,5 @@
-// window.addEventListener("load", () => {
-//   let long;
-//   let lat;
-//   let temperatureDescription = document.querySelector(
-//     ".temperature-description"
-//   );
-//   let temperatureDegree = document.querySelector(".temperature-degree");
-//   let locationTimezone = document.querySelector(".location-timezone");
-//   let pIcon = document.querySelector(".icon");
-
-//   let API_KEY = "3d5d4c41d614a45bdfa9e1be469c140a";
-
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition((position) => {
-//       long = position.coords.longitude;
-//       lat = position.coords.latitude;
-//       //   const proxy = "https://cors-anywhere.herokuapp.com/";
-//       const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}`;
-
-//       fetch(api)
-//         .then((response) => {
-//           return response.json();
-//         })
-//         .then((data) => {
-//           console.log(data);
-//           const { name } = data;
-//           const { temp, humidity } = data.main;
-//           const { icon, description } = data.weather[0];
-
-//           //set DOM elements from the API
-//           temperatureDegree.textContent = temp;
-//           temperatureDescription.textContent = description;
-//           locationTimezone.textContent = `Weather in ${name}`;
-
-//           //   pIcon.textContent = icon;
-//           pIcon.src = "http://openweathermap.org/img/wn/" + icon + ".png";
-//         });
-//     });
-//   } else {
-//     h1.textContext = "Please allow location to display the weather";
-//   }
-// });
 let weather = {
-  apiKey: "3d5d4c41d614a45bdfa9e1be469c140a",
+  apiKey: "API KEY GOES HERE",
   fetchWeather: function (city) {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?q=" +
